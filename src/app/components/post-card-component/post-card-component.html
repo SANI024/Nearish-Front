@@ -24,7 +24,11 @@
   </ng-container>
 
   <div class="post-footer">
-    ❤️ {{ getLikeCount() }} Likes | 💬 {{ getCommentCount() }} Comments
+    <div class="like-comment">
+      <app-post-like-component [postId]="post.id"></app-post-like-component>
+      ❤️ {{ getLikeCount() }} Likes |
+      💬 {{ getCommentCount() }} Comments
+    </div>
 
     <div class="actions">
       <button (click)="onEdit()">✏️ Edit</button>

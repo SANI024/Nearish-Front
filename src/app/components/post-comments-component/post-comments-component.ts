@@ -20,7 +20,7 @@ export class PostCommentsComponent implements OnInit {
   comments: PostComment[] = [];
   newCommentText = '';
 
-  // Added edit tracking
+  
   editCommentId: number | null = null;
   editCommentText: string = '';
 

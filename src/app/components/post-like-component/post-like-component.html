@@ -1,0 +1,4 @@
+<button (click)="toggleLike()">
+      {{ liked ? '💔 Unlike' : '❤️ Like' }}
+    </button>
+    <span *ngIf="error" class="error">{{ error }}</span>

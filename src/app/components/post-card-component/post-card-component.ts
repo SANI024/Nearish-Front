@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { PostService } from '../../Services/posts-service';
 import { RemovePost } from '../../interfaces/remove-post';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { PostLikeComponent } from '../post-like-component/post-like-component';
 
 @Component({
   selector: 'app-post-card-component',
-  imports: [CommonModule],
+  imports: [CommonModule,PostLikeComponent],
   templateUrl: './post-card-component.html',
   styleUrl: './post-card-component.css',
 })
