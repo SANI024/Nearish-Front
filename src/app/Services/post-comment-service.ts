@@ -10,7 +10,7 @@ import { UpdatePostComment } from '../interfaces/update-post-comment';
 })
 export class PostCommentService {
   private readonly baseUrl =
-    'https://nearish-back.onrender.com/api/PostComment/';
+    'http://ebs-nearish-api-development.eba-jdfmahu2.eu-north-1.elasticbeanstalk.com/api/PostComment/';
 
   constructor(private http: HttpClient) {}
 
@@ -33,15 +33,13 @@ export class PostCommentService {
 
   getComments(postId: number): Observable<BaseResponceInterface> {
     return this.http.get<BaseResponceInterface>(
-      `https://nearish-back.onrender.com/api/Post/GetPost`
+      `http://ebs-nearish-api-development.eba-jdfmahu2.eu-north-1.elasticbeanstalk.com/api/Post/GetPost`
     );
   }
 
-
   deleteComment(commentId: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/delete post comments`, {
-      
-      body: { postCommentId: commentId }, 
+      body: { postCommentId: commentId },
     });
   }
 

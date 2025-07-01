@@ -11,7 +11,8 @@ import { getUserInterface } from '../interfaces/getUser-interface';
 export class UserService {
   private http = inject(HttpClient);
   private tokenService = inject(TokenService);
-  private baseUrl = 'https://nearish-back.onrender.com/api/';
+  private baseUrl =
+    'http://ebs-nearish-api-development.eba-jdfmahu2.eu-north-1.elasticbeanstalk.com/api/';
   private userSubject = new BehaviorSubject<User | null>(null);
 
   get user$(): Observable<User | null> {

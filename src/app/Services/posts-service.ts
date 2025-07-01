@@ -12,7 +12,8 @@ import { GetPostRequest } from '../interfaces/get-post-request';
   providedIn: 'root',
 })
 export class PostService {
-  private readonly baseUrl = 'https://nearish-back.onrender.com/api/Post/';
+  private readonly baseUrl =
+    'http://ebs-nearish-api-development.eba-jdfmahu2.eu-north-1.elasticbeanstalk.com/api/Post/';
   public createdPosts: Post[] = [];
   constructor(private http: HttpClient) {}
 

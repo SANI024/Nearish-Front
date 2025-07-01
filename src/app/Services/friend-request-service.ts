@@ -10,7 +10,8 @@ import { TokenService } from './token-service';
   providedIn: 'root',
 })
 export class FriendRequestService {
-  private apiUrl = 'https://nearish-back.onrender.com/api/FriendRequest';
+  private apiUrl =
+    'http://ebs-nearish-api-development.eba-jdfmahu2.eu-north-1.elasticbeanstalk.com/api/FriendRequest';
 
   constructor(private http: HttpClient, private tokenService: TokenService) {}
 
@@ -50,7 +51,7 @@ export class FriendRequestService {
   isFriend(userId: number) {
     const headers = this.getAuthHeaders();
     const body = { userId: userId };
-    return this.http.post<boolean>(`${this.apiUrl}/isFriend`, body, {
+    return this.http.post<boolean>(`${this.apiUrl}/FriendStatus`, body, {
       headers,
     });
   }
